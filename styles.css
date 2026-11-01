@@ -214,3 +214,6 @@ body.drawer-locked{overflow:hidden}
 
 /* Override legacy nav and enforce filtered-item visibility */
 @media(max-width:900px){.mobile-drawer .drawer-links{position:static;top:auto;left:auto;right:auto;display:flex;flex-direction:column;align-items:stretch;gap:0;margin:0;padding:0;box-shadow:none;background:transparent;border:0;border-radius:0;max-height:none;overflow:visible}.mobile-drawer .drawer-links>a{width:100%;font-size:16px;min-height:57px;padding:13px 2px}.mobile-drawer .drawer-links>a[hidden],.mobile-drawer .drawer-group[hidden],.mobile-drawer .drawer-sub a[hidden]{display:none!important}}
+
+/* Drawer final overrides: suppress legacy mobile dropdown */
+@media(max-width:900px){.header nav#nav,.header nav#nav.open{display:none!important}.mobile-drawer .drawer-links{display:flex!important}.drawer-search-wrap button{position:absolute;right:6px;top:5px;width:40px;height:40px;border:0;border-radius:10px;background:transparent;color:var(--green);font-size:27px;cursor:pointer}.drawer-search-wrap input{padding-right:52px}}
