@@ -16,3 +16,18 @@
 .avatar{overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}.doctor:hover .avatar img{transform:scale(1.035)}.avatar img{transition:transform .3s ease}@media(prefers-reduced-motion:reduce){.avatar img{transition:none}}
 
 .avatar{position:relative}.avatar img{position:relative;z-index:2}.avatar-fallback{position:absolute;inset:0;display:grid!important;place-items:center;margin:0!important;font-family:Georgia,serif;font-size:70px!important;color:#7fae93!important;z-index:1}.avatar img.is-broken{display:none}
+
+/* Photographic visual direction */
+.visual-photo{background:#d8e8df;border-radius:28px 180px 28px 28px;display:block;position:relative}
+.visual-photo>img{display:block;width:100%;height:100%;min-height:520px;object-fit:cover;object-position:center;filter:saturate(.85)}
+.visual-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(17,52,39,.63));pointer-events:none}
+.photo-overlay{position:absolute;left:36px;right:28px;bottom:36px;z-index:2;color:#fff}
+.photo-label{display:block;font-size:clamp(23px,2.4vw,34px);font-weight:700;line-height:1.15;letter-spacing:-.04em;max-width:350px}
+.photo-label-sub{display:block;font-size:12px;margin-top:12px;color:#e2f1e8}
+.about-photo{padding:0;position:relative;overflow:hidden;background:#d9e7df}
+.about-photo:before{display:none}
+.about-photo img{display:block;width:100%;height:100%;min-height:430px;object-fit:cover;object-position:center}
+.about-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,55,40,.58))}
+.about-photo .about-photo-label{position:absolute;bottom:28px;left:30px;right:25px;z-index:2;color:#fff;font:700 clamp(20px,2.5vw,32px)/1.2 Manrope,system-ui,sans-serif;letter-spacing:-.035em}
+@media(max-width:900px){.visual-photo{border-radius:22px 120px 22px 22px}.visual-photo>img{min-height:330px}.about-photo img{min-height:320px}}
+@media(max-width:600px){.visual-photo{border-radius:18px 100px 18px 18px}.visual-photo>img{min-height:320px}.photo-overlay{left:23px;right:20px;bottom:25px}.about-photo img{min-height:270px}.about-photo .about-photo-label{left:20px;bottom:20px}}
