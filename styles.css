@@ -83,3 +83,22 @@
 @media(max-width:900px){.service{min-height:270px}}
 @media(max-width:600px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service{min-height:228px;padding:16px;border-radius:18px;gap:8px}.service:before{width:140px;height:140px;right:-45px;top:35px;box-shadow:0 0 0 22px rgba(255,255,255,.15)}.service-arrow{width:31px;height:31px;font-size:17px}.service-number{font-size:10px}.service-symbol{width:70px;height:70px;font-size:50px}.service-bottom strong{font-size:clamp(15px,4vw,19px);line-height:1.22}.service-sub{font-size:10px;line-height:1.4}}
 @media(max-width:360px){.service-grid{grid-template-columns:1fr}.service{min-height:210px}.service-bottom strong{font-size:20px}.service-sub{font-size:12px}}
+
+/* Service layout hardening for Safari and stale legacy rules */
+.service-grid>a.service{display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;min-width:0;gap:12px;background-color:var(--card-bg,#eef4ec)}
+.service-grid>a.service .service-top{display:flex;flex-direction:row;align-items:center;justify-content:space-between;width:100%;flex:0 0 auto}
+.service-grid>a.service .service-number{display:block;font-size:12px;font-weight:800;line-height:1.2;flex:0 0 auto}
+.service-grid>a.service .service-arrow{display:grid;flex:0 0 38px;place-items:center;position:static;line-height:1}
+.service-grid>a.service .service-symbol{display:grid;place-items:center;align-self:flex-end;flex:0 0 auto}
+.service-grid>a.service .service-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:100%;min-width:0;margin-top:auto}
+.service-grid>a.service .service-bottom strong{display:block;width:100%;font-size:clamp(19px,1.9vw,25px);font-weight:750;line-height:1.23;letter-spacing:-.04em;overflow-wrap:break-word}
+.service-grid>a.service .service-sub{display:block;width:100%;font-size:12px;font-weight:500;line-height:1.45;color:#557365}
+@media(max-width:600px){
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .service-grid>a.service{min-height:235px;padding:17px;gap:10px}
+ .service-grid>a.service .service-arrow{flex-basis:31px}
+ .service-grid>a.service .service-symbol{width:65px;height:65px;font-size:47px}
+ .service-grid>a.service .service-bottom strong{font-size:clamp(15px,4vw,19px);line-height:1.25}
+ .service-grid>a.service .service-sub{font-size:10.5px;line-height:1.4}
+}
+@media(max-width:360px){.service-grid{grid-template-columns:1fr}.service-grid>a.service .service-bottom strong{font-size:20px}.service-grid>a.service .service-sub{font-size:12px}}
