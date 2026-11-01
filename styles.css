@@ -217,3 +217,30 @@ body.drawer-locked{overflow:hidden}
 
 /* Drawer final overrides: suppress legacy mobile dropdown */
 @media(max-width:900px){.header nav#nav,.header nav#nav.open{display:none!important}.mobile-drawer .drawer-links{display:flex!important}.drawer-search-wrap button{position:absolute;right:6px;top:5px;width:40px;height:40px;border:0;border-radius:10px;background:transparent;color:var(--green);font-size:27px;cursor:pointer}.drawer-search-wrap input{padding-right:52px}}
+
+/* Verified clinic branding from dolgoletie.pro (logo image and live-site UI colors) */
+:root{--ink:#342B45;--green:#8E7AB5;--mint:#F6F1FA;--line:#E9DFEE;--bg:#FCF9FD;--muted:#746C7D;--cream:#F9F3FA;--brand-primary:#8E7AB5;--brand-accent:#E493B3}
+.brand-logo{display:block;width:54px;height:54px;object-fit:contain;flex:none}
+.drawer-brand{display:flex;align-items:center;gap:12px}
+.drawer-logo{display:block;width:62px;height:62px;object-fit:contain;flex:none}
+.header{border-bottom-color:#EDE5F0}
+.brand,.drawer-brand{color:var(--ink)}
+.hero{background:#FCF8FD}
+.hero .eyebrow{color:#8E7AB5}
+.visual-art{background:radial-gradient(circle at 45% 30%,#FBEFFA 0%,#E8D5ED 48%,#BBA6D5 100%)}
+.button:hover,.drawer-booking:hover,.mobile-booking-link:hover{background:#79639E}
+.button.outline:hover{background:#F7EDF9}
+nav a:hover,.text-link:hover,.drawer-sub a:hover,.drawer-links>a:hover,.drawer-group>summary:hover{color:#8E7AB5}
+.drawer-head{background:#F8F3FB;border-bottom-color:#E8DFEF}
+.drawer-close{border-color:#E1D6EA}
+.drawer-search-wrap input{background:#FCF9FD;border-color:#E8DBEE}
+.drawer-search-label{color:#76678D}
+.drawer-links>a,.drawer-group>summary{border-bottom-color:#F0E8F1}
+.drawer-plus{background:#F6EDF8}
+.drawer-sub{background:#FCF8FD;border-color:#F0E8F1}
+.drawer-sub a{color:#655078}
+.drawer-booking{background:#8E7AB5}
+.menu-bars span{background:#8E7AB5}
+.service:hover{border-color:#E7D5EE}
+a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#E493B3}
+@media(max-width:600px){.brand-logo{width:45px;height:45px}.drawer-logo{width:54px;height:54px}.drawer-brand{font-size:14px}}
