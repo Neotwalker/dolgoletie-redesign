@@ -169,3 +169,13 @@
 .contact-appointment-call:hover{text-decoration:underline}
 @media(max-width:900px){.contacts-layout{grid-template-columns:1fr}.contact-appointment{padding:32px}.contact-appointment h3{font-size:30px}}
 @media(max-width:600px){.contact-heading{margin-bottom:24px}.contacts-details{grid-template-columns:1fr;gap:10px}.contact-detail{padding:22px;border-radius:19px}.contact-detail h3{font-size:20px}.contact-appointment{padding:28px 22px;border-radius:22px}.contact-appointment .button{width:100%}.contact-appointment h3{font-size:28px}}
+
+/* Mobile navigation controls */
+.menu{width:48px;height:48px;align-items:center;justify-content:center;border-radius:12px}
+.menu-bars{display:flex;flex-direction:column;gap:6px;width:25px}
+.menu-bars span{display:block;height:2px;width:25px;background:var(--green);border-radius:2px}
+.menu[aria-expanded=true] .menu-bars span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu[aria-expanded=true] .menu-bars span:nth-child(2){opacity:0}
+.menu[aria-expanded=true] .menu-bars span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:900px){.menu{display:flex}.header nav#nav a{display:flex;align-items:center;min-height:52px;width:100%;padding:12px 0;border-bottom:1px solid #edf1ec}.header nav#nav a:last-child{border:0}}
+@media(max-width:600px){.hero-copy h1{font-size:clamp(36px,9.3vw,50px);line-height:1.09}.hero-copy>p{line-height:1.65}}
