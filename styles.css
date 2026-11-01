@@ -102,3 +102,6 @@
  .service-grid>a.service .service-sub{font-size:10.5px;line-height:1.4}
 }
 @media(max-width:360px){.service-grid{grid-template-columns:1fr}.service-grid>a.service .service-bottom strong{font-size:20px}.service-grid>a.service .service-sub{font-size:12px}}
+
+/* Consistent medical SVG pictograms */
+.service-grid>a.service .service-symbol svg{width:80%;height:80%;display:block;overflow:visible;stroke:currentColor;filter:none}.service-grid>a.service .service-symbol{color:#6d9887}.service-grid>a.service .service-symbol svg *{vector-effect:non-scaling-stroke}@media(max-width:600px){.service-grid>a.service .service-symbol svg{width:85%;height:85%}}
