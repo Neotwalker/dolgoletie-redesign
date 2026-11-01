@@ -140,3 +140,10 @@
 }
 @media(min-width:901px){.mobile-booking{display:none}}
 @media(prefers-reduced-motion:reduce){.mobile-booking-link{transition:none}}
+
+/* Compact mobile booking tray: retain 52px touch target and safe-area support */
+@media(max-width:900px){
+ body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+ .mobile-booking{padding:7px max(18px,env(safe-area-inset-right,0px)) calc(7px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));box-shadow:0 -4px 16px rgba(19,59,41,.06)}
+ .mobile-booking-link{min-height:52px}
+}
