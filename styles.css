@@ -31,3 +31,37 @@
 .about-photo .about-photo-label{position:absolute;bottom:28px;left:30px;right:25px;z-index:2;color:#fff;font:700 clamp(20px,2.5vw,32px)/1.2 Manrope,system-ui,sans-serif;letter-spacing:-.035em}
 @media(max-width:900px){.visual-photo{border-radius:22px 120px 22px 22px}.visual-photo>img{min-height:330px}.about-photo img{min-height:320px}}
 @media(max-width:600px){.visual-photo{border-radius:18px 100px 18px 18px}.visual-photo>img{min-height:320px}.photo-overlay{left:23px;right:20px;bottom:25px}.about-photo img{min-height:270px}.about-photo .about-photo-label{left:20px;bottom:20px}}
+
+/* Mobile layout repair: isolate photographic blocks from legacy decorative styles */
+.hero-grid,.hero-copy,.hero-visual,.about-grid,.about-grid>div,.doctor-grid,.doctor{min-width:0}
+.visual-photo,.about-photo{display:block;isolation:isolate}
+.visual-photo>img,.about-photo>img{width:100%;max-width:100%;display:block;object-fit:cover}
+.about-art.about-photo{display:block;min-height:0;height:440px;padding:0}
+.about-art.about-photo>img{height:100%;min-height:0}
+.about-art.about-photo>.about-photo-label{position:absolute;inset:auto 24px 25px 24px;display:block;z-index:3;max-width:calc(100% - 48px);margin:0;color:#fff;font-family:Manrope,system-ui,sans-serif;font-size:clamp(21px,2.3vw,31px);font-weight:700;line-height:1.2;letter-spacing:-.035em;overflow-wrap:break-word}
+.doctor{min-width:0}.doctor h3,.doctor>span{overflow-wrap:anywhere;hyphens:auto}
+@media(max-width:900px){
+ .hero-grid{min-height:0}
+ .visual-photo{height:380px;min-height:0}
+ .visual-photo>img{height:100%;min-height:0}
+ .about-art.about-photo{height:350px;min-height:0}
+}
+@media(max-width:600px){
+ html,body{max-width:100%;overflow-x:clip}
+ .hero-grid,.about-grid,.service-grid,.contact-grid{min-width:0}
+ .hero-visual{width:100%;min-width:0}
+ .visual-photo{height:330px;min-height:0;border-radius:20px 90px 20px 20px}
+ .visual-photo>img{height:100%;min-height:0}
+ .photo-overlay{left:20px;right:20px;bottom:20px}
+ .photo-label{font-size:clamp(20px,6vw,27px);line-height:1.2}
+ .about-art.about-photo{height:290px;min-height:0;border-radius:20px}
+ .about-art.about-photo>img{height:100%;min-height:0}
+ .about-art.about-photo>.about-photo-label{font-size:clamp(19px,5.8vw,26px);line-height:1.22;left:20px;right:20px;bottom:20px;max-width:calc(100% - 40px)}
+ .doctor-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .doctor{border-radius:16px;padding-bottom:14px}
+ .doctor .avatar{height:auto;aspect-ratio:4/4.4;min-height:0}
+ .doctor .avatar img{height:100%;position:absolute;inset:0}
+ .doctor h3{font-size:13px;line-height:1.3;margin:13px 10px 7px}
+ .doctor>span{font-size:10.5px;line-height:1.45;margin:0 10px}
+}
+@media(max-width:360px){.doctor-grid{grid-template-columns:1fr}.doctor .avatar{aspect-ratio:4/3}.doctor h3{font-size:16px}.doctor>span{font-size:12px}}
